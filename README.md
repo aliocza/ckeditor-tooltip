@@ -16,10 +16,22 @@ Ckeditor Button:
 
 ```
 config.tooltip_toolbar = [
-		                            { name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },
-		                            [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],
-		                            '/',
-		                            { name: 'basicstyles', items: [ 'Bold', 'Italic' ] }
-	                            ];
+    { name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },
+    [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],
+    '/',
+    { name: 'basicstyles', items: [ 'Bold', 'Italic' ] }
+];
 ```
 
+## Enable Tooltip with Boostrap
+
+```
+$(function() {
+    //tooltip
+    $('em.source-info').tooltip({
+        effect: 'slide',
+        trigger: "click", //This is fine if you have links into tooltip
+        html: true, //Set false if you disable ckeditor textarea
+    });
+});
+```
