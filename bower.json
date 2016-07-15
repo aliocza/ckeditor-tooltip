@@ -1,0 +1,19 @@
+{
+  "name": "ckeditor-tooltip",
+  "version": "0.1.0",
+  "homepage": "https://github.com/aliocza/ckeditor-tooltip",
+  "authors": [
+    "Mazurkiewicz Aliocha"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "ckeditor": ">= 4.0.0"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
