@@ -23,7 +23,7 @@ config.tooltip_toolbar = [
 ];
 ```
 
-## Enable Tooltip with Boostrap
+## Enable Tooltip with Bootstrap
 
 ```
 $(function() {
