@@ -4,6 +4,15 @@ CKEDITOR.dialog.add( 'tooltipDialog', function ( editor ) {
     if(editor.config.tooltip_html == null){
         editor.config.tooltip_html = true;
     }
+    if(editor.config.tooltip_toolbar == null){
+        editor.config.tooltip_toolbar = [
+		                            { name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },
+		                            [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],
+		                            '/',
+		                            { name: 'basicstyles', items: [ 'Bold', 'Italic' ] }
+	                            ];
+    }
+    
     
     return {
         title: editor.lang.tooltip.title,
@@ -50,12 +59,7 @@ CKEDITOR.dialog.add( 'tooltipDialog', function ( editor ) {
 						onShow: function() {
 						  if(editor.config.tooltip_html === true)
 						  CKEDITOR.replace( this._.inputId, {
-						    	toolbar: [
-		{ name: 'document', items: [ 'Source', '-', 'NewPage', 'Preview', '-', 'Templates' ] },	// Defines toolbar group with name (used to create voice label) and items in 3 subgroups.
-		[ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],			// Defines toolbar group without name.
-		'/',																					// Line break - next group will be placed in new line.
-		{ name: 'basicstyles', items: [ 'Bold', 'Italic' ] }
-	]
+						    	toolbar: editor.config.tooltip_toolbar
 						  });
 						},
 					    onHide: function() {
