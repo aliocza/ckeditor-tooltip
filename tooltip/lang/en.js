@@ -1,4 +1,4 @@
-CKEDITOR.plugins.setLang('tooltip', 'fr', {
+CKEDITOR.plugins.setLang('tooltip', 'en', {
 	button : 'Insert a Tooltip',
 	title : 'Insert a Tooltip',
 	tab : 'Basic setting',
