@@ -75,7 +75,7 @@ CKEDITOR.dialog.add( 'tooltipDialog', function ( editor ) {
 					       CKEDITOR.instances[this._.inputId].destroy();
 					    }
 
-					}
+					},
 				]
 			}
 		],
