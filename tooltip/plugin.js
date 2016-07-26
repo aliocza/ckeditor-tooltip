@@ -30,20 +30,36 @@ CKEDITOR.plugins.add( 'tooltip', {
 		// crée un button clique droit
 		if ( editor.contextMenu ) {
 			editor.addMenuGroup( 'tooltipGroup' );
-			editor.addMenuItem( 'tooltipItem', {
-				label: 'Editer l\'information',
-				icon: this.path + 'icons/tooltip-remove.png',
-				command: 'tooltip',
-				group: 'tooltipGroup'
-			});
+            // If the "menu" plugin is loaded, register the menu items.
+			            if ( editor.addMenuItems ) {
+				            editor.addMenuItems( {
+					            tooltipItem: {
+						            label: 'Editer l\'information',
+						            command: 'tooltip',
+						            group: 'tooltipGroup',
+						            icon: this.path + 'icons/tooltip.png',
+						            order: 1
+					            },
+
+					            removeTooltipItem: {
+						            label: 'Supprimer l\'information',
+						            command: 'removeTooltip',
+						            icon: this.path + 'icons/tooltip-remove.png',
+						            group: 'tooltipGroup',
+						            order: 2
+					            },
+				            } );
+            }
 		
 		
 		// identifie au clique droit de l'element si c'est bien un type tooltip
 	
 			editor.contextMenu.addListener( function( element ) {
 				if ( element.getAscendant( 'em', true )) {
+				    var menu = {};
 					if(element.hasClass('source-info')){
-						return { tooltipItem: CKEDITOR.TRISTATE_OFF };
+						menu = { 'tooltipItem': CKEDITOR.TRISTATE_OFF, 'removeTooltipItem': CKEDITOR.TRISTATE_OFF  };
+						return menu;
 					}
 				}
 			});
