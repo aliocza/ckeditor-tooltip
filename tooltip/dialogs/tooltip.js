@@ -42,7 +42,15 @@ CKEDITOR.dialog.add( 'tooltipDialog', function ( editor ) {
 						type: 'textarea',
 						id: 'tooltip',
 						label: editor.lang.tooltip.txtArea,
-						validate: CKEDITOR.dialog.validate.notEmpty( editor.lang.tooltip.txtErrorEmpty ),
+						validate:function(){
+						    if(editor.config.tooltip_html === true)
+						    CKEDITOR.instances[this._.inputId].updateElement();
+						    
+						    if ( this.getValue().length < 1 ) {
+                                alert( editor.lang.tooltip.txtErrorEmpty );
+                                return false;
+                            };
+						 },
 						//setup permet d'injecter une valeur par exemple au clique droit et edit
 						setup: function( element ) {
 							this.setValue( element.getAttribute( "title" ) );
