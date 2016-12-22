@@ -1,4 +1,4 @@
-CKEDITOR.plugins.addExternal('tooltip', '/tooltip/', 'plugin.js' );
+CKEDITOR.plugins.addExternal('tooltip', '/ckeditor-tooltip/tooltip/', 'plugin.js' );
 CKEDITOR.editorConfig = function( config ) {
 	config.extraPlugins = "tooltip";
 	config.toolbar = [
