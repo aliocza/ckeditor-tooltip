@@ -23,13 +23,10 @@
   <script src="https://cdn.ckeditor.com/4.6.1/full/ckeditor.js"></script>
   
 <script>
-
-                CKEDITOR.replace( 'editor1', {
-	toolbarCanCollapse : true,
-	plugins.addExternal( 'tooltip', '/tooltip/' );
-	language: 'en'
-});
-            </script>
+	CKEDITOR.replace('editor1', {
+		customConfig: '/config.js',
+	} );
+</script>
 
 
 
