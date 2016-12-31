@@ -19,7 +19,7 @@ The default options can be overriden on config.js.
 Balise used for the tooltip:
 
 ```
-config.tooltip_class = 'source-info';
+config.tooltip_tag = 'em';
 ```
 
 Class container the tooltip:
