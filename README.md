@@ -19,7 +19,7 @@ The default options can be overriden on config.js.
 Balise used for the tooltip:
 
 ```
-config.tooltip_tag = 'em';
+config.tooltip_tag = 'span';
 ```
 
 Class container the tooltip:
@@ -51,7 +51,7 @@ config.tooltip_toolbar = [
 <script>
 $(function() {
     //tooltip
-    $('em.source-info').tooltip({ //balise.yourClass if you custom plugin
+    $('span.source-info').tooltip({ //balise.yourClass if you custom plugin
         effect: 'slide',
         trigger: "click", //This is fine if you have links into tooltip
         html: true, //Set false if you disable ckeditor textarea
