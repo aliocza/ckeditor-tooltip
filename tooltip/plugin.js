@@ -111,7 +111,7 @@ CKEDITOR.removeTooltipCommand.prototype = {
   requiredContent: CKEDITOR.config.tooltip_tag + "[title]"
 };
 
-CKEDITOR.config.tooltip_tag = 'em';
+CKEDITOR.config.tooltip_tag = 'span';
 CKEDITOR.config.tooltip_class = 'source-info';
 CKEDITOR.config.tooltip_html = true;
 CKEDITOR.config.tooltip_toolbar = [
