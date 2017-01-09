@@ -2,7 +2,7 @@
 * Tooltip Plugin
 *
 * @author Aliocha Mazurkiewicz <contact@renska.be>
-* @version 0.4.3
+* @version 0.5.0
 */
 CKEDITOR.dialog.add('tooltipDialog', function(editor) {
 
