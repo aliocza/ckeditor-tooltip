@@ -57,7 +57,7 @@ CKEDITOR.dialog.add('tooltipDialog', function(editor) {
             },
             onShow: function() {
               if (editor.config.tooltip_html === true)
-                CKEDITOR.replace(this._.inputId, {toolbar: editor.config.tooltip_toolbar});
+                CKEDITOR.replace(this._.inputId, {toolbar: editor.config.tooltip_toolbar, stylesSet: editor.config.tooltip_styleSet});
               }
             ,
             onHide: function() {
